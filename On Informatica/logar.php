@@ -7,7 +7,7 @@ $sql = "SELECT * FROM login WHERE usuario ='$usuario' AND senha = '$senha' ";
 $query = mysql_query($sql) or die(mysql_error());
 $qtda  = mysql_num_rows($query);
 if($qtda == 0){
-	echo 'Erro ao logar';	
+	echo 'Usuario ou Senha incorretos';	
 	}else{		
 		$_SESSION['usuario'] = $usuario;
 		$_SESSION['senha']   = $senha;		

@@ -115,6 +115,16 @@ nav#menu a:hover{
 	color: #ffffff;
 	text-decoration:underline;
 }
+
+
+nav#menu{
+	height:0px;
+}
+nav#menu ul{
+	list-style:none;
+	text-transform:uppercase;
+}
+
 /*Formatação Banner*/
 
 section#promocao {
@@ -376,4 +386,53 @@ section#formulario td{
 }
 section#formulario table{
 	padding:30px;
+}
+/*Formatacao da tela de administardor */
+
+section#secao1{
+	text-align:center;
+	height:700px;
+	width:700px;
+	position: absolute;
+	top:400px;
+	left:400px;
+}
+/*Formação Menu */
+nav#menu1 li{
+	background-color:#2F4F4F;
+	padding:40px;
+	margin:-10px ;
+	position:relative;
+	left:-20px;
+	transition: background-color 1s;
+	font-size:15px;
+	color:white;
+}
+
+
+nav#menu1 li:hover{
+	background-color: black;
+}
+
+nav#menu1 a {
+	text-decoration:none;
+	color: white;
+}
+nav#menu1 a:hover{
+	color: white;
+	text-decoration:underline;
+	
+}
+nav#menu1 ul{
+	list-style:none;
+	text-transform:uppercase;
+}
+
+nav#menu1{
+	width:300px;
+}
+/*Rodape Administardor */
+div#interface footer#rodape1 {
+    background-color:#2F4F4F;
+	
 }

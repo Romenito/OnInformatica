@@ -1,7 +1,5 @@
-
 <?php session_start();
 include 'conn.php'; ?>
- 
 
 <!doctype html>
 <html>
@@ -17,17 +15,12 @@ include 'conn.php'; ?>
  <body id="corpo" onload="myFunction()">
 
 	<div id="interface">
-	 <?php
-$secao_usuario = $_SESSION['usuario'];
-$secao_senha   = $_SESSION['senha'];
-?>
 	<header id="cabecalho">
 	    <form>
 		<h1 id="nome-empresa">ON Informática</h1>
 		<h2 id="slogan" >Segurança em sua compra Online</h2>
 		</form>
-		<form id="login"  method="post" >
-		    <h6>Ola :<?php  echo $secao_usuario;   ?></h6> <br>
+		<form id="login"  method="post" > <br>
 			Click em Sair para retornar<br>
 			<a href="?sair">sair</a>
             <?php
@@ -39,10 +32,10 @@ $secao_senha   = $_SESSION['senha'];
 		</form>
 	</header>
 	<!-- MENU -->
-	<nav id="menu1" >
+	<nav id="menu1">
 	 <ul>
 	    <li id="menu"><h2> Manipulação de Produtos<h2> </li>
-		<li id="menu"><a id="menu1.1" href="Inicio.php" title="Home">Exibir</a> </li>
+		<li id="menu"><a id="menu1.1" href="index.html" title="Home">Exibir</a> </li>
 		<li method="post" id="menu"><a  id="menu1.2" href="?incluir" title="Notebooks">Inserir</a> <?php
                if(isset($_REQUEST['incluir'])){	
 	           session_destroy();
@@ -62,11 +55,22 @@ $secao_senha   = $_SESSION['senha'];
 	          }
              ?></li>
 	 </ul>
-	 
 	</nav>
 	<section id="secao1">
-		   <h1>Olá :<?php  echo $secao_usuario;   ?></h1> <br>
-		   <h1> SEJA BEM VINDO AO PAINEL ADMINISTRATIVO DA ON INFORMÁTICA</h1><br>
+		<!-- DADOS PESSOAIS-->
+	<form method="post">
+	<fieldset id="usuario">
+		<legend>Descreva o produto que deseja excluir</legend>
+		<table>
+			<tr>
+				<td><label for="nome">Descrição: </label></td><td>
+					<input id="nome" type="text" required name="descricao" pattern>
+				</td></tr><br><br>
+		</table>
+		        <div >
+                     <button type="submit" id="excluir" >Excluir</button>
+                 </div>
+	</fieldset>
      </section>
 
 	
