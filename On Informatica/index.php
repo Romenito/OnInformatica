@@ -31,7 +31,6 @@
 			Não é cadastrado ainda? <br>
 			<a href="telaCadastro.html" id="cadastrar" >Cadastre-se agora</a>
 		</form>
-			<?php  include 'logar.php';  ?>
 		<!-- BUSCA NO SITE -->
 		<form id="busca" method="get" action="/search/">
 			<input id="caixa" type="search" name="busca" placeholder="Pesquisar...">		
