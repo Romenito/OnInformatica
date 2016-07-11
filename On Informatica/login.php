@@ -1,4 +1,4 @@
-<?php session_start(); include 'conn.php';  ?>
+<?php session_start(); include_once("conn.php"); ?>
 <!doctype html>
 <html>
 <head>

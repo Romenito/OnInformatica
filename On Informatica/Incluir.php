@@ -2,7 +2,7 @@
 include 'conn.php'; ?>
 
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,46 +58,48 @@ include 'conn.php'; ?>
 	</nav>
 	<section id="secao1">
 		<!-- DADOS PESSOAIS-->
-	<form method="post">
+	<form  action="insert.php" method="post" enctype="multipart/form-data" name="cadastro" >
 	<fieldset id="usuario">
 		<legend>Cadastro de uma novo produto</legend>
 		<table>
 			<tr>
 				<td><label for="nome">Nome*: </label></td><td>
-					<input id="nome" type="text" required name="Nome do Produto" pattern><br><br>
+					<input id="nome" type="text" name="nome" ><br><br>
 				</td></tr>
 			<tr><td><label for="sobrenome">Descrição*: </label></td><td>
-					<input id="descricao" type="text" required name="Descrição do produto" pattern"><br><br>
+					<input id="descricao" type="text" name="descricao"><br><br>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Imagem: </label></td><td>
-				<form name="formEnviar" method="POST" enctype="multipart/form-data>
-				<input id="imagem" type="file" values="" /> <br><br>
-				<input type="submit" value="Enviar" name="enviar" />
-				</form>
+                    <input type="file" name="imagem" />
 				</td>
 			</tr>
 			<tr>
 				<td><label for="rg">Preço: </label></td><td>
-					<input id="preco" type="number" required name="preco" placeholder="00,00" pattern> <br><br>
+					<input id="preco" type="number" name="preco"> <br><br>
 				</td>
 			</tr>
 			<tr>
-				<td><label>Promoção*:</label></td><td>
-					<input id="promocao" type="text" required name="promocao" placeholder="Sim/Não" pattern"><br><br>
-				</td>
+				<td><label>Promoção*:</label></td>
+                     <td><input type="checkbox" name="promocao" value="1" /><br><br></td>
 			<tr>	
 				<td><label>Desconto*:</label></td><td>
-					<input id="desconto" type="text" required name="desconto" placeholder="" pattern"><br><br>
+					<input id="desconto" type="number" name="desconto" ><br><br>
+				</td>
+			</tr>
+			<tr>	
+				<td><label>Tipo*:</label></td><td>
+					<input id="tipo" type="text" name="tipo" ><br><br>
 				</td>
 			</tr>
 			
 		</table><br><br>
 		        <div >
-                     <button type="submit" class="ls-btn">Gravar</button>
+                     <button type="submit" name="cadastrar">Gravar</button>
                  </div>
 	</fieldset>
+	</form>
      </section>
 
 	

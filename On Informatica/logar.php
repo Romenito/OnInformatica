@@ -3,7 +3,7 @@ if(isset($_REQUEST['logar'])){
 $usuario = $_REQUEST['usuario'];
 $senha   = $_REQUEST['senha'];
  
-$sql = "SELECT * FROM login WHERE usuario ='$usuario' AND senha = '$senha' ";
+$sql = "SELECT * FROM usuario WHERE login ='$usuario' AND senha = '$senha' ";
 $query = mysql_query($sql) or die(mysql_error());
 $qtda  = mysql_num_rows($query);
 if($qtda == 0){
