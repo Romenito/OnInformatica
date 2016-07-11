@@ -1,4 +1,5 @@
-<?php session_start(); include_once("conn.php"); ?>
+<?php session_start();
+include 'conn.php';?>
 <!doctype html>
 <html>
 <head>
@@ -22,7 +23,24 @@ input#logar{width:auto; height:auto; position:relative; float:right; margin:5px;
   <input type="text" name="senha" id="senha" placeholder="Sua senha">
   <input type="submit" name="logar" id="logar" value="Logar">  
 </form>
-<?php  include 'logar.php';  ?>
+<?php 
+//include 'logar.php';
+if (isset($_REQUEST['logar'])) {
+    $usuario = $_REQUEST['usuario'];
+    $senha = $_REQUEST['senha'];
+
+    $sql = "SELECT * FROM usuario WHERE login ='$usuario' AND senha = '$senha'";
+    $query = mysqli_query($conn, $sql) or die(mysql_error());
+    $qtda = mysqli_num_rows($query);
+    if ($qtda == 0) {
+        echo 'Usuario e/ou Senha incorretos';
+    } else {
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['senha'] = $senha;
+        header("Location: admin.php");
+    }
+}
+?>
 </div>
 </body>
 </html>

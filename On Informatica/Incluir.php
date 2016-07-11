@@ -11,7 +11,6 @@ include 'conn.php'; ?>
 	<title>ON Informática | Início</title>
 </head>
 
-
  <body id="corpo" onload="myFunction()">
 
 	<div id="interface">
@@ -39,7 +38,7 @@ include 'conn.php'; ?>
 		<li method="post" id="menu"><a  id="menu1.2" href="?incluir" title="Notebooks">Inserir</a> <?php
                if(isset($_REQUEST['incluir'])){	
 	           session_destroy();
-	            header("Location: Incluir.php");	
+	            header("Location: incluir.php");	
 	          }
              ?> </li>
 		<li id="menu"><a id="menu1.3" href="?excluir">Excluir</a> <?php
@@ -101,8 +100,6 @@ include 'conn.php'; ?>
 	</fieldset>
 	</form>
      </section>
-
-	
 	<div></div>
 		<footer id="rodape1">
 		<p>Desenvolvido por: André S. & Romen D.</p>
