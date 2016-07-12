@@ -69,7 +69,7 @@ if (!empty($imagem["name"])) {
         // Se os dados forem inseridos com sucesso
         if ($sql) {
             echo "Produto cadastrado com sucesso!";
-            header("refresh: 5; url=admin.php"); //espera 5s e volta pra Admin.php
+            header("refresh: 4; url=admin.php"); //espera 5s e volta pra Admin.php
             //echo "<script>window.location='admin.php';alert('Produto cadastrado com sucesso!');</script>"; //ao confirmar o dialogo volta pra Admin.php
             //ps: ambos perdem o login feito :(
         }
