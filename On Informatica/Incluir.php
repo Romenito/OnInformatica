@@ -34,7 +34,11 @@ include 'conn.php'; ?>
 	<nav id="menu1">
 	 <ul>
 	    <li id="menu"><h2> Manipulação de Produtos<h2> </li>
-		<li id="menu"><a id="menu1.1" href="index.html" title="Home">Exibir</a> </li>
+		<li id="menu"><a id="menu1.1" href="?exibir" title="Home">Exibir</a> <?php
+               if(isset($_REQUEST['exibir'])){	
+	           session_destroy();
+	            header("Location: exibir.php");	
+	          } ?></li>
 		<li method="post" id="menu"><a  id="menu1.2" href="?incluir" title="Notebooks">Inserir</a> <?php
                if(isset($_REQUEST['incluir'])){	
 	           session_destroy();

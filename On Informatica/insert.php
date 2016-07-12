@@ -20,9 +20,9 @@ $error = null;
 // Se a foto estiver sido selecionada
 if (!empty($imagem["name"])) {
     // Largura máxima em pixels
-    $largura = 390;
+    $largura = 490;
     // Altura máxima em pixels
-    $altura = 390;
+    $altura = 490;
     // Tamanho máximo do arquivo em bytes
     $tamanho = 600000;
 

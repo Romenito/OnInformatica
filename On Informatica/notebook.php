@@ -1,12 +1,11 @@
-<?php session_start(); include 'conn.php';  ?>
 <!DOCTYPE html>
  <html lang="pt-br">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="icon" type="image/ico" href="img/logo.ico" >
-	<title>ON Informática | Início</title>
+	<link rel="icon" type="image/ico" href="img/logo.ico" />
+	<title>ON Informática | Notebooks</title>
  </head>
  <body id="corpo" onload="myFunction()">
 	<div id="interface">
@@ -18,16 +17,16 @@
 		<a accesskey="5" href="#" onclick="mudaCor(1)" id="link-alto-contraste">Alto Contraste <span>[5]</span></a>
 		<a accesskey="6" href="mapaSite.html" id="link-mapa-site">Mapa do site <span>[6]</span></a>
 		<script type="text/javascript" src="js/altocontraste.js"></script>
-	    <form>
+	    <form >
 		<h1 id="nome-empresa">ON Informática</h1>
 		<h2 id="slogan" >Segurança em sua compra Online</h2>
 		</form>
-		<form id="login"  method="post" >
+		<form id="login">
 			Login:<br>
-			<input type="text" id="usuario"  name="usuario"><br>
+			<input id="email" type="email" required name="email" placeholder="email@exemplo.com"><br>
 			Senha:<br>
-			<input type="text" id="senha" name="senha"><br>
-			<input type="submit" id="logar" name="logar" value="Entrar"><br>
+			<input id="senha1" type="password" required name="psw" placeholder="8 dígitos" pattern="\d{8}"><br>
+			<input type="submit" value="Entrar"><br>
 			Não é cadastrado ainda? <br>
 			<a href="telaCadastro.html" id="cadastrar" >Cadastre-se agora</a>
 		</form>
@@ -41,7 +40,7 @@
 	<nav id="menu">
 	 <ul>
 		<li id="menu1"><a id="menu1.1" href="index.html" title="Home">Início</a> </li>
-		<li id="menu2"><a  id="menu1.2" href="notebook.php" title="Notebooks">Notebooks</a> </li>
+		<li id="menu2"><a id="menu1.2" href="notebooks.html" title="Notebooks">Notebooks</a> </li>
 		<li id="menu3"><a id="menu1.3" href="smartphones.html">Smartphones</a> </li>
 		<li id="menu4"><a id="menu1.4" href="tablets.html">Tablets</a></li>
 		<li id="menu5"><a id="menu1.5" href="sobre.html">Sobre Nós</a></li>
@@ -59,35 +58,66 @@
 		<div id="bip"></div>
 		<script type="text/javascript" src="js/rotinaBanner.js"></script>
 	</section>
-	<!-- IMAGENS -->
-	<section id="imagens" onload="MyFunction()">
-		<ul >
-		  <li id="notebook"><h2>Notebook Samsung Expert X23</h2>
-			<h5>Samsung Expert X23 Intel Core i5 - Placa de Vídeo 2BG 8GB 1TB Windows 10 LED 15,6"</h5>
-			<h3>R$ 3.324,05 à vista</h3>
-			<button type="button" class="show-modal1">Ver vídeo</button></li>
-		  <li id="tablet"><h2>Tablet Samsung Galaxy Tab E</h2>
-			<h5>Tablet Samsung Galaxy Tab E 8GB Tela 9.6 Wi-Fi - Android 4.4 Quad-Core Câm. 5MP + Frontal 2MP GPS</h5>
-			<h3>R$ 849,90 à vista</h3>
-			<button type="button" class="show-modal2">Ver vídeo</button></li>
-		  <li id="celular"><h2>Smartphone Lumia 535</h2>
-			<h5>Smartphone Microsoft Lumia 535 8GB Dual Chip 3G - Câm. 5MP Tela 5" Proc. Quad Core Windows Phone 8.1</h5>
-			<h3>R$ 799,00 à vista</h3>
-		    <button type="button" class="show-modal3">Ver vídeo</button></li>
+	<!-- PRODUTOS -->	
+	<section id="imagens">
+		<ul>
+			<li id="notebook1"><h2>Notebook Samsung Expert X23</h2>
+				<h5 id="notebook11">Notebook Samsung Expert X23 Intel Core i5 - Placa de Vídeo 2BG 8GB 1TB Windows 10 LED 15,6"</h5>
+				<h3 id="notebook12">R$ 3.324,05 à vista</h3>
+				<br><br><br><button type="button" class="show-modal1">Ver vídeo</button></li>
+			<li id="notebook2"><h2>Notebook HP 14-ac108br</h2>
+				<h5 id="notebok21">Notebook HP 14-ac108br Intel Core i3 - 4GB 500GB Windows 10 Tela 14" HDMI</h5>
+				<h3 id="notebook22">R$ 2.279,05 à vista</h3>
+				<br><br><br><button type="button" class="show-modal2">Ver vídeo</button></li>
+			<li id="notebook3"><h2>Notebook Lenovo Ideapad 100</h2>
+				<h5 id="notebook31">Notebook Lenovo Ideapad 100 Intel Celeron 4GB 500GB Windows 10 LED 14" HDMI Placa Vídeo Intel HD</h5>
+				<h3 id="notebook32">R$ 1.566,55 à vista</h3>
+				<br><br><br><button type="button" class="show-modal3">Ver vídeo</button></li>
+			<li id="notebook4"><h2>Notebook Dell Inspiron 15</h2>
+				<h5 id="notebook41">Notebook Dell Inspiron 15 Série 3000 I15-3542-D10 - Intel Core i3 4GB 1TB LED 15,6" HDMI Linux</h5>
+				<h3 id="notebook42">R$ 2.049,00 à vista</h3>
+				<br><br><br><button type="button" class="show-modal4">Ver vídeo</button></li>
+			<li id="notebook5"><h2>Notebook Vaio Fit15F</h2>
+				<h5 id="ntoebook51">Notebook Vaio Fit15F Intel Core i5 - 8GB 1TB Windows 10 LED 15,6 HDMI Bluetooth 4.0</h5>
+				<h3 id="notebook52">R$ 3.799,00 à vista</h3>
+				<br><br><br><button type="button" class="show-modal5">Ver vídeo</button></li>
+			<li id="notebook6"><h2>Notebook Asus Z450</h2>
+				<h5 id="notebook61">Notebook Asus Z450 Intel Core i5 4GB 1TB - Windows 10 LCD 14 HDMI Bluetooth</h5>
+				<h3 id="notebook62">R$ 2.849,05 à vista</h3>
+				<br><br><br><button type="button" class="show-modal6">Ver vídeo</button></li>
 		</ul>
 		<video id="clickVideo">
-			<link rel="stylesheet" href="css/showYtVideo.css" type="text/css" property=''>
+			<link href="css/showYtVideo.css" rel="stylesheet" type="text/css" property=''>
 			<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 			<script src="js/jquery.showYtVideo.js"></script>
-			<script type="text/javascript" src="js/rotinaVideo-index.js"></script>
+			<script type="text/javascript" src="js/rotinaVideo-notebooks.js"></script>
 		</video>
-	</section> 
+		<?php
+
+            $link = @mysql_connect("localhost", "root", "")
+            or die ('Erro: '. mysql_error());
+             mysql_select_db("oninformatica");
+
+            $sql = mysql_query("SELECT * FROM produto where tipo='notebook'");
+
+            while ($produto = mysql_fetch_object($sql)) {
+	            echo "<img src='img/".$produto->imagem."' alt='Foto de exibição' /><br />";
+	            echo "" . $produto->nome . "<br />";
+	            echo " " . $produto->descricao . "<br /><br />";
+	            echo "" . $produto->preco . "<br />";
+	            echo " " . $produto->promocao . "<br /><br />";
+	            echo "" . $produto->desconto . "<br />";
+	            echo " " . $produto->tipo . "<br /><br />";
+             }
+        ?>
+
+	</section>
 	<!-- PUBLICIDADES -->
 	<aside id="publi1">
-		<img src="img/publi1.jpg" alt="Publicidade 1">
+		<img src="img/publi1.jpg" alt="Publicidade 1" >
 	</aside>
 	<aside id="publi2">
-		<img src="img/publi2.jpg" alt="Publicidade 2">
+		<img src="img/publi2.jpg" alt="Publicidade 2" >
 	</aside>
 	<!-- RODAPÉ -->
 	<footer id="rodape">
@@ -117,9 +147,7 @@
         alt="Valid CSS!" />
      </a>
     </p>
-
 	</footer> 
-
 	</div>
  </body>
  </html>
