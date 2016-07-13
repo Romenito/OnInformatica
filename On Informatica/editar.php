@@ -60,47 +60,20 @@ include 'conn.php'; ?>
              ?></li>
 	 </ul>
 	</nav>
-	<section id="secao1">
-		<!-- DADOS PESSOAIS-->
-	<form method="post">
-	<fieldset id="usuario">
-		<legend>Atualize as Informações dos Produtos</legend>
-		<table>
-			<tr>
-				<td><label for="nome">Nome: </label></td><td>
-					<input id="nome" type="text" required name="Nome do Produto" pattern><br><br>
-				</td></tr>
-			<tr><td><label for="sobrenome">Descrição: </label></td><td>
-					<input id="descricao" type="text" required name="Descrição do produto" pattern"><br><br>
-				</td>
-			</tr>
-			<tr>
-				<td><label>Imagem: </label></td><td>
-				<input id="imagem" type="text" required name="image" > <br><br>
-				
-				</td>
-			</tr>
-			<tr>
-				<td><label for="rg">Preço: </label></td><td>
-					<input id="preco" type="number" required name="preco" placeholder="00,00" pattern> <br><br>
-				</td>
-			</tr>
-			<tr>
-				<td><label>Promoção:</label></td><td>
-					<input id="promocao" type="text" required name="promocao" placeholder="Sim/Não" pattern"><br><br>
-				</td>
-			<tr>	
-				<td><label>Desconto:</label></td><td>
-					<input id="desconto" type="text" required name="desconto" placeholder="" pattern"><br><br>
-				</td>
-			</tr>
-			
-		</table><br><b
-		        <div >
-                     <button type="submit" id="editar">Editar</button>
-                 </div>
-	</fieldset>
-     </section>
+        <section id="secao1">
+            <!-- DADOS PESSOAIS-->
+            <form action="update1.php" method="post" enctype="multipart/form-data" name="remocao" >
+                <fieldset id="usuario">
+                    <legend>Entre com o produto que deseja editar</legend>
+                    <table>
+                        <tr>
+                            <td><label for="nome">Nome: </label>
+                                <input id="nome" type="text" required name="nome_produto">
+                                <button type="submit" id="salvar">Buscar</button>
+                            </td></tr><br><br>
+                    </table>
+                </fieldset>
+        </section>
 
 	
 	<div></div>

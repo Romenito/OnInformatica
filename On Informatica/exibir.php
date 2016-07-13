@@ -76,11 +76,10 @@
 
             $sql = mysql_query("SELECT * FROM produto");
  
-// Exibe as informações de cada usuário
+            // Exibe as informações de cada usuário
            while ($produto = mysql_fetch_object($sql)) {
-	// Exibimos a foto
+            // Exibimos a foto
 	              echo "<img src='img/".$produto->imagem."' alt='Foto de exibição' /><br />";
-	// Exibimos o nome e email
 	              echo "" . $produto->nome . "<br />";
 	              echo " " . $produto->descricao . "<br /><br />";
 	              echo "" . $produto->preco . "<br />";

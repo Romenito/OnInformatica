@@ -16,9 +16,9 @@ $sql = mysql_query("DELETE FROM produto WHERE nome = '".$nome."'");
 // Removendo imagem da pasta fotos/
 $temp = unlink("img/".$produto->imagem."");
 if($temp == 1){
-    echo "Produto deletado!";
-    header("refresh: 4; url=admin.php");
+    echo "<script>alert('Produto deletado!');</script>";
+    header("refresh: 1; url=admin.php");
 } else {
-    echo "Erro na remoção do produto!";
-    header("refresh: 4; url=admin.php");
+    echo "<script>alert('Erro na remoção do produto!');</script>";
+    header("refresh: 1; url=admin.php");
 }
