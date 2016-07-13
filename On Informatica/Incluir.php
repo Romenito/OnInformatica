@@ -63,7 +63,7 @@ include 'conn.php'; ?>
 		<!-- DADOS PESSOAIS-->
 	<form  action="insert.php" method="post" enctype="multipart/form-data" name="cadastro" >
 	<fieldset id="usuario">
-		<legend>Cadastro de uma novo produto</legend>
+		<legend>Cadastro de produto</legend>
 		<table>
 			<tr>
 				<td><label for="nome">Nome*: </label></td><td>
@@ -85,7 +85,7 @@ include 'conn.php'; ?>
 			</tr>
 			<tr>
 				<td><label>Promoção*:</label></td>
-                     <td><input type="checkbox" name="promocao" value="1" /><br><br></td>
+                     <td><input type="checkbox" name="promocao"  /><br><br></td>
 			<tr>	
 				<td><label>Desconto*:</label></td><td>
 					<input id="desconto" type="number" name="desconto" ><br><br>

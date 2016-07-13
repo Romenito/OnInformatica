@@ -1,14 +1,13 @@
 <?php ?>
-
 <!doctype html>
 <html>
-<head>
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="icon" type="image/ico" href="img/logo.ico" >
-	<title>ON Informática | Início</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="icon" type="image/ico" href="img/logo.ico" >
+        <title>ON Informática | Início</title>
+    </head>
 
 
  <body id="corpo" onload="myFunction()">
@@ -66,14 +65,16 @@
                         <legend>Atualize as informações do produto</legend>
                         <?php session_start();
                         include 'conn.php'; 
-                        $nome = $_POST['nome_produto']; 
-                        $sql = mysqli_query($conn, "SELECT * FROM produto WHERE nome = '" . $nome . "'");
+                        $id = $_POST['id_produto']; 
+                        $sql = mysqli_query($conn, "SELECT * FROM produto WHERE id = '".$id."'");
                         $produto = mysqli_fetch_object($sql);
                                                                 
-                        echo "<table>
-                            <tr>
+                        echo "
+                            <table>
                                 <td><label for='nome'>Nome: </label></td><td>
-                                    <input id='nome' type='text' name='nome' value='".$produto->nome."'><br><br>
+                                    <input id='nome' type='text' name='nome' value='".$produto->nome."'></td><td>
+                                    <label for='id'>ID:</label><input id='id' type='text' name='id' readonly='true' size='3px' value='".$produto->id."'></td>
+                                <br><br>
                                 </td></tr>
                             <tr><td><label for='sobrenome'>Descrição: </label></td><td>
                                     <input id='descricao' type='text' name='descricao' value='".$produto->descricao."'><br><br>
@@ -106,8 +107,6 @@
                         ?>   
                     </fieldset>
         </section>
-
-	
 	<div></div>
 		<footer id="rodape1">
 		<p>Desenvolvido por: André S. & Romen D.</p>
@@ -116,7 +115,6 @@
 		<p>Criado em: 20 de maio de 2016.</p>
 		<p>Atualizado em: 27 de maio de 2016.</p>
 	</footer> 
-
 	</div>
 </body>
 </html>

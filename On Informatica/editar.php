@@ -67,8 +67,8 @@ include 'conn.php'; ?>
                     <legend>Entre com o produto que deseja editar</legend>
                     <table>
                         <tr>
-                            <td><label for="nome">Nome: </label>
-                                <input id="nome" type="text" required name="nome_produto">
+                            <td><label for="nome">ID: </label>
+                                <input id="nome" type="text" required name="id_produto">
                                 <button type="submit" id="salvar">Buscar</button>
                             </td></tr><br><br>
                     </table>

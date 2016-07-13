@@ -76,8 +76,8 @@ include 'conn.php'; ?>
                 <legend>Entre com o produto que deseja excluir</legend>
                 <table>
                     <tr>
-                        <td><label for="nome">Nome: </label></td><td>
-                            <input id="nome" type="text" required name="nome_produto">
+                        <td><label for="nome">ID: </label></td><td>
+                            <input id="nome" type="text" required name="id_produto">
                         </td></tr><br><br>
                 </table>
                 <div >

@@ -1,6 +1,7 @@
 <?php session_start();
  include_once ("/conn.php");
  
+@$id = $_POST['id'];
 @$nome = $_POST['nome'];
 @$descricao = $_POST["descricao"];
 $imagem = $_FILES["imagem"];
@@ -47,18 +48,18 @@ if (!empty($imagem["name"])) {
         // Remover imagem anterior
         $link = @mysql_connect("localhost", "root", "") or die ('Erro: '. mysql_error());
         mysql_select_db("oninformatica");
-        $sql_temp = mysql_query("SELECT imagem FROM produto WHERE nome = '".$nome."'");
+        $sql_temp = mysql_query("SELECT imagem FROM produto WHERE id = '".$id."'");
         $produto = mysql_fetch_object($sql_temp);
         $temp = unlink("img/".$produto->imagem."");
     }
     // Insere os dados no banco
         $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}',imagem='{$nome_imagem}', "
-        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE nome='".$nome."' ");
+        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='".$id."' ");
 }
 else{
         // Insere os dados no banco
         $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}', "
-        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE nome='".$nome."' ");
+        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='".$id."' ");
         
         // Se os dados forem inseridos com sucesso
         if ($sql) {
