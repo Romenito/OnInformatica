@@ -40,10 +40,10 @@
 	<!-- MENU -->
 	<nav id="menu">
 	 <ul>
-		<li id="menu1"><a id="menu1.1" href="index.html" title="Home">Início</a> </li>
+		<li id="menu1"><a id="menu1.1" href="index.php" title="Home">Início</a> </li>
 		<li id="menu2"><a  id="menu1.2" href="notebook.php" title="Notebooks">Notebooks</a> </li>
-		<li id="menu3"><a id="menu1.3" href="smartphones.html">Smartphones</a> </li>
-		<li id="menu4"><a id="menu1.4" href="tablets.html">Tablets</a></li>
+		<li id="menu3"><a id="menu1.3" href="smartphones.php">Smartphones</a> </li>
+		<li id="menu4"><a id="menu1.4" href="tablets.php">Tablets</a></li>
 		<li id="menu5"><a id="menu1.5" href="sobre.html">Sobre Nós</a></li>
 	 </ul>
 	</nav>

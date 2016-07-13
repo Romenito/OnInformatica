@@ -13,8 +13,6 @@ header#cabecalho {
 }
 header#cabecalho a {
 	display:inline-block;
-	background-color:#00cc44;
-	padding:3px;
 	margin: -30px 0px 0px 1px;
 	text-decoration:none;
 	color: #000000;
@@ -28,7 +26,7 @@ header#cabecalho a:hover{
 header#cabecalho h1{
 	font-family: 'Lobster', cursive;
 	font-size: 40pt;
-	color: #00cc44;
+	color: #2F4F4F;
 	text-shadow: 5px 5px 5px rgb(0, 0, 0);
 	padding:0px;
 	margin:0px;
@@ -41,7 +39,7 @@ header#cabecalho h2{
 	padding:0px;
 	margin-top:50px;
 	font-family: 'Indie Flower', cursive;
-	color:#00cc44;
+	color:#2F4F4F;
 	text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 header#cabecalho form#login{
@@ -92,7 +90,7 @@ nav#menu ul{
 
 nav#menu li{
 	display:inline-block;
-	background-color:#00cc44;
+	background-color:#2F4F4F;
 	padding:40px 40px 40px 51px;
 	margin:-10px ;
 	position:relative;
@@ -104,15 +102,15 @@ nav#menu li{
 
 
 nav#menu li:hover{
-	background-color: #003300;
+	background-color: black;
 }
 
 nav#menu a {
 	text-decoration:none;
-	color: #000000;
+	color: white;
 }
 nav#menu a:hover{
-	color: #ffffff;
+	color: white;
 	text-decoration:underline;
 }
 
@@ -157,7 +155,7 @@ div#interface {
 }
 
 div#interface footer{
-	background-color:#00cc44;
+	background-color:#2F4F4F;
 }
 /*Formataçao dos Videos */
 
@@ -187,7 +185,7 @@ section#imagens li{
 	margin:10px;
 	float:left;
 	border: 5px solid #ffffff;
-	background-color:gray;
+	/*background-color:gray;*/
 	box-shadow:1px 1px 3px rgba(0,0,0,.4);
 	-webkit-transition: all 0.3s ease-in;
 }
@@ -314,7 +312,7 @@ aside#publi2 img{
 
 footer {
     background-color:gray;
-    color:black;
+    color:white;
     clear:both;
     text-align:center;
     padding:5px; 

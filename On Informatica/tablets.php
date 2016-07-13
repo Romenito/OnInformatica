@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="icon" type="image/ico" href="img/logo.ico" />
-	<title>ON Informática | Notebooks</title>
+	<title>ON Informática | Tablets</title>
  </head>
  <body id="corpo" onload="myFunction()">
 	<div id="interface">
@@ -40,7 +40,7 @@
 	<nav id="menu">
 	 <ul>
 		<li id="menu1"><a id="menu1.1" href="index.php" title="Home">Início</a> </li>
-		<li id="menu2"><a id="menu1.2" href="notebook.php" title="Notebooks">Notebooks</a> </li>
+		<li id="menu2"><a  id="menu1.2" href="notebook.php" title="Notebooks">Notebooks</a> </li>
 		<li id="menu3"><a id="menu1.3" href="smartphones.php">Smartphones</a> </li>
 		<li id="menu4"><a id="menu1.4" href="tablets.php">Tablets</a></li>
 		<li id="menu5"><a id="menu1.5" href="sobre.html">Sobre Nós</a></li>
@@ -58,60 +58,57 @@
 		<div id="bip"></div>
 		<script type="text/javascript" src="js/rotinaBanner.js"></script>
 	</section>
-	<!-- PRODUTOS -->	
+	<!-- PRODUTOS -->
 	<section id="imagens">
 		<ul>
-			<li id="notebook1"><h2>Notebook Samsung Expert X23</h2>
-				<h5 id="notebook11">Notebook Samsung Expert X23 Intel Core i5 - Placa de Vídeo 2BG 8GB 1TB Windows 10 LED 15,6"</h5>
-				<h3 id="notebook12">R$ 3.324,05 à vista</h3>
+			<li id="tablet1"><h2>Tablet Samsung Galaxy Tab E</h2>
+				<h5 id="tablet11">Tablet Samsung Galaxy Tab E 8GB Tela 9.6 Wi-Fi - Android 4.4 Quad-Core Câm. 5MP + Frontal 2MP GPS</h5>
+				<h3 id="tablet12">R$ 849,90 à vista</h3>
 				<br><br><br><button type="button" class="show-modal1">Ver vídeo</button></li>
-			<li id="notebook2"><h2>Notebook HP 14-ac108br</h2>
-				<h5 id="notebok21">Notebook HP 14-ac108br Intel Core i3 - 4GB 500GB Windows 10 Tela 14" HDMI</h5>
-				<h3 id="notebook22">R$ 2.279,05 à vista</h3>
+			<li id="tablet2"><h2>Tablet Samsung Galaxy Tab S2</h2>
+				<h5 id="tablet21">Tablet Samsung Galaxy Tab S2 32GB Tela 9,7 Wi-Fi - Android 5.0 Octa-Core Câm. 8MP + Frontal 2.1MP</h5>
+				<h3 id="tablet22">R$ 1.979,91 à vista</h3>
 				<br><br><br><button type="button" class="show-modal2">Ver vídeo</button></li>
-			<li id="notebook3"><h2>Notebook Lenovo Ideapad 100</h2>
-				<h5 id="notebook31">Notebook Lenovo Ideapad 100 Intel Celeron 4GB 500GB Windows 10 LED 14" HDMI Placa Vídeo Intel HD</h5>
-				<h3 id="notebook32">R$ 1.566,55 à vista</h3>
+			<li id="tablet3"><h2>iPad Mini Apple 32GB</h2>
+				<h5 id="tablet31">iPad Mini Apple 32GB Cinza Tela 7,9 Retina Wi-Fi - Processador A7 Câmera 5MP + 1,2MP Frontal</h5>
+				<h3 id="tablet32">R$ 2.339,10 à vista</h3>
 				<br><br><br><button type="button" class="show-modal3">Ver vídeo</button></li>
-			<li
-			id="notebook4"><h2>Notebook Dell Inspiron 15</h2>
-				<h5 id="notebook41">Notebook Dell Inspiron 15 Série 3000 I15-3542-D10 - Intel Core i3 4GB 1TB LED 15,6" HDMI Linux</h5>
-				<h3 id="notebook42">R$ 2.049,00 à vista</h3>
+			<li id="tablet4"><h2>Tablet Sony Xperia Z2</h2>
+				<h5 id="tablet41">Tablet Sony Xperia Z2 16gb Tela 10 Desbloqueado</h5>
+				<h3 id="tablet42">R$ 1.949,00 à vista</h3>
 				<br><br><br><button type="button" class="show-modal4">Ver vídeo</button></li>
-			<li id="notebook5"><h2>Notebook Vaio Fit15F</h2>
-				<h5 id="ntoebook51">Notebook Vaio Fit15F Intel Core i5 - 8GB 1TB Windows 10 LED 15,6 HDMI Bluetooth 4.0</h5>
-				<h3 id="notebook52">R$ 3.799,00 à vista</h3>
+			<li id="tablet5"><h2>Tablet Motorola Xoom 2</h2>
+				<h5 id="tablet51">Motorola Xoom 2 Mz608 Media Edition</h5>
+				<h3 id="tablet52">R$ 799,99 à vista</h3>
 				<br><br><br><button type="button" class="show-modal5">Ver vídeo</button></li>
-			<li id="notebook6"><h2>Notebook Asus Z450</h2>
-				<h5 id="notebook61">Notebook Asus Z450 Intel Core i5 4GB 1TB - Windows 10 LCD 14 HDMI Bluetooth</h5>
-				<h3 id="notebook62">R$ 2.849,05 à vista</h3>
+			<li id="tablet6"><h2>Microsoft Surface Pro 4</h2>
+				<h5 id="tablet61">Microsoft Surface Pro 4 I5 256gb 8gb Ram</h5>
+				<h3 id="tablet62">R$ 5.995,00 à vista</h3>
 				<br><br><br><button type="button" class="show-modal6">Ver vídeo</button></li>
+				
 				<?php
 
-                    $link = @mysql_connect("localhost", "root", "")
-                    or die ('Erro: '. mysql_error());
-                    mysql_select_db("oninformatica");
+                   $link = @mysql_connect("localhost", "root", "")
+                   or die ('Erro: '. mysql_error());
+                   mysql_select_db("oninformatica");
 
-                    $sql = mysql_query("SELECT * FROM produto where tipo='notebook'");
+                   $sql = mysql_query("SELECT * FROM produto where tipo='tablet'");
 
-                    while ($produto = mysql_fetch_object($sql)) {
+                   while ($produto = mysql_fetch_object($sql)) {
 	                     echo "<li><img src='img/".$produto->imagem."' alt='Foto de exibição' /></br>";
 	                     echo "<h1 style='background-color:gray ; color:white'>" . $produto->nome . "</h1>";
 	                     echo "<strong>" . $produto->descricao . "</strong></br><br><br>";
 	                     echo "<h4 style='color:red; font-size:20px' >R$ " . $produto->preco . " à vista</h4></li>";
-					}
+                   }
                 ?>
-			
-		</ul>
-		<video id="clickVideo">
+		 </ul>
+		 <video id="clickVideo">
 			<link href="css/showYtVideo.css" rel="stylesheet" type="text/css" property=''>
 			<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 			<script src="js/jquery.showYtVideo.js"></script>
-			<script type="text/javascript" src="js/rotinaVideo-notebooks.js"></script>
+			<script type="text/javascript" src="js/rotinaVideo-tablets.js"></script>
 		</video>
 		
-		
-
 	</section>
 	<!-- PUBLICIDADES -->
 	<aside id="publi1">
