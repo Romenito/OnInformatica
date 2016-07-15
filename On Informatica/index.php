@@ -74,6 +74,21 @@
 			<h5>Smartphone Microsoft Lumia 535 8GB Dual Chip 3G - Câm. 5MP Tela 5" Proc. Quad Core Windows Phone 8.1</h5>
 			<h3>R$ 799,00 à vista</h3>
 		    <button type="button" class="show-modal3">Ver vídeo</button></li>
+			<?php
+
+                    $link = @mysql_connect("localhost", "root", "")
+                    or die ('Erro: '. mysql_error());
+                    mysql_select_db("oninformatica");
+
+                    $sql = mysql_query("SELECT * FROM produto where promocao='1'");
+
+                    while ($produto = mysql_fetch_object($sql)) {
+	                     echo "<li><img src='img/".$produto->imagem."' alt='Foto de exibição' /></br>";
+	                     echo "<h1 style='background-color:gray ; color:white'>" . $produto->nome . "</h1>";
+	                     echo "<strong>" . $produto->descricao . "</strong></br><br>";
+	                     echo "<h4 style='color:red; font-size:20px' >R$ " . $produto->desconto . " à vista</h4></li>";
+					}
+                ?>
 		</ul>
 		<video id="clickVideo">
 			<link rel="stylesheet" href="css/showYtVideo.css" type="text/css" property=''>

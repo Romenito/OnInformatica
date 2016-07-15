@@ -37,24 +37,24 @@ include 'conn.php'; ?>
 	    <li id="menu"><h2> Manipulação de Produtos<h2> </li>
 		<li id="menu"><a id="menu1.1" href="?exibir" title="Home">Exibir</a><?php
                 if(isset($_REQUEST['exibir'])){	
-	            session_destroy();
+	           // session_destroy();
 	            header("Location: exibir.php");	
 	          } ?></li>
 		<li method="post" id="menu"><a  id="menu1.2" href="?incluir" title="Notebooks">Inserir</a> <?php
                if(isset($_REQUEST['incluir'])){	
-	           session_destroy();
+	          // session_destroy();
 	            header("Location: Incluir.php");	
 	          }
              ?> </li>
 		<li id="menu"><a id="menu1.3" href="?excluir">Excluir</a> <?php
                if(isset($_REQUEST['excluir'])){	
-	           session_destroy();
+	          // session_destroy();
 	            header("Location: excluir.php");	
 	          }
              ?></li>
 		<li id="menu"><a id="menu1.4" href="?editar">Editar</a> <?php
                if(isset($_REQUEST['editar'])){	
-	           session_destroy();
+	         //  session_destroy();
 	            header("Location: editar.php");	
 	          }
              ?></li>

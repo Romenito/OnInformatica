@@ -41,7 +41,7 @@
                                 <li method="post" id="menu"><a  id="menu1.2" href="?incluir" title="Notebooks">Inserir</a>
                                     <?php
                                     if (isset($_REQUEST['incluir'])) {
-                                        session_destroy();
+                                       // session_destroy();
                                         header("Location: incluir.php");
                                     }
                                     ?>
@@ -49,7 +49,7 @@
                                 <li id="menu"><a id="menu1.3" href="?excluir">Excluir</a>
                                     <?php
                                     if (isset($_REQUEST['excluir'])) {
-                                        session_destroy();
+                                       // session_destroy();
                                         header("Location: excluir.php");
                                     }
                                     ?>
@@ -57,14 +57,14 @@
                                 <li id="menu"><a id="menu1.4" href="?editar">Editar</a>
                                     <?php
                                     if (isset($_REQUEST['editar'])) {
-                                        session_destroy();
+                                      //  session_destroy();
                                         header("Location: editar.php");
                                     }
                                     ?>
                                 </li>
                 </ul>
                 </nav>
-            <section id="secao1">
+            <section id="secao2">
                 <form name="listagem">
                     <fieldset id="usuario">
                         <legend>Lista de Produtos Cadastrados</legend>
@@ -91,7 +91,6 @@
                         ?>  
                     </fieldset>
             </section>
-<div></div>
         <footer id="rodape1">
             <p>Desenvolvido por: André S. & Romen D.</p>
             <p>Contato: <a href="mailto:someone@example.com">andre@email.com</a>.</p>

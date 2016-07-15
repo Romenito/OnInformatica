@@ -395,6 +395,16 @@ section#secao1{
 	top:400px;
 	left:400px;
 }
+section#secao2{
+	text-align:center;
+	position: relative;
+	width:900px;
+	top:-500px;
+	left:300px;
+}
+footer#rodape2{
+	clear:both;
+}
 /*Formação Menu */
 nav#menu1 li{
 	background-color:#2F4F4F;
@@ -432,5 +442,6 @@ nav#menu1{
 /*Rodape Administardor */
 div#interface footer#rodape1 {
     background-color:#2F4F4F;
+
 	
 }
