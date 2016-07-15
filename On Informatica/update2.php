@@ -1,6 +1,7 @@
-<?php session_start();
- include_once ("/conn.php");
- 
+<?php
+session_start();
+include_once ("/conn.php");
+
 @$id = $_POST['id'];
 @$nome = $_POST['nome'];
 @$descricao = $_POST["descricao"];
@@ -8,23 +9,24 @@ $imagem = $_FILES["imagem"];
 $nome_imagem = $_FILES["imagem"]["name"];
 @$preco = (double) $_POST["preco"];
 @$desconto = (double) $_POST["desconto"];
-@$promocao = (int) $_POST["promocao"];
+@$promocao = $_POST["promocao"];
 @$tipo = $_POST["tipo"];
 $error = null;
+if($promocao == "sim"){
+    $promocao = 1;
+}else {$promocao = 0;}
 
 // Se a foto estiver sido selecionada
 if (!empty($imagem["name"])) {
     $largura = 490;
     $altura = 490;
     $tamanho = 600000;
-
     // Verifica se o arquivo é uma imagem
     if (!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $imagem["type"])) {
         $error[1] = "Isso não é uma imagem.";
     }
     // Pega as dimensões da imagem
     $dimensoes = getimagesize($imagem["tmp_name"]);
-
     // Verifica se a largura da imagem é maior que a largura permitida
     if ($dimensoes[0] > $largura) {
         $error[2] = "A largura da imagem não deve ultrapassar " . $largura . " pixels";
@@ -35,7 +37,7 @@ if (!empty($imagem["name"])) {
     }
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
     if ($imagem["size"] > $tamanho) {
-        $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+        $error[4] = "A imagem deve ter no máximo " . $tamanho . " bytes";
     }
     // Se não houver nenhum erro
     if (count($error) == 0) {
@@ -46,31 +48,28 @@ if (!empty($imagem["name"])) {
         // Faz o upload da imagem para seu respectivo caminho
         move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
         // Remover imagem anterior
-        $link = @mysql_connect("localhost", "root", "") or die ('Erro: '. mysql_error());
+        $link = @mysql_connect("localhost", "root", "") or die('Erro: ' . mysql_error());
         mysql_select_db("oninformatica");
-        $sql_temp = mysql_query("SELECT imagem FROM produto WHERE id = '".$id."'");
+        $sql_temp = mysql_query("SELECT imagem FROM produto WHERE id = '" . $id . "'");
         $produto = mysql_fetch_object($sql_temp);
-        $temp = unlink("img/".$produto->imagem."");
+        $temp = unlink("img/" . $produto->imagem . "");
     }
     // Insere os dados no banco
-        $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}',imagem='{$nome_imagem}', "
-        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='".$id."' ");
-}
-else{
-        // Insere os dados no banco
-        $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}', "
-        . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='".$id."' ");
-        
-        // Se os dados forem inseridos com sucesso
-        if ($sql) {
-            echo "<script>alert('Produto atualizado com sucesso!');</script>";
-            header("refresh: 1; url=editar.php");
-        }
-    
+    $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}',imagem='{$nome_imagem}', "
+            . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='" . $id . "' ");
+} else {
+    // Insere os dados no banco
+    $sql = mysqli_query($conn, "UPDATE Produto SET nome='{$nome}', descricao='{$descricao}', "
+            . "preco={$preco}, promocao={$promocao}, desconto={$desconto} WHERE id='" . $id . "' ");
+    // Se os dados forem inseridos com sucesso
+    if ($sql) {
+        echo "<script>alert('Produto atualizado com sucesso!');</script>";
+        header("refresh: 1; url=editar.php");
+    }
     // Se houver mensagens de erro, exibe-as
     if (count($error) != 0) {
         foreach ($error as $erro) {
-            echo "<script>alert('".$erro."');</script>";
+            echo "<script>alert('" . $erro . "');</script>";
         }
     }
 }
