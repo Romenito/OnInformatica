@@ -85,8 +85,8 @@ include 'conn.php';
                 while ($produto = mysql_fetch_object($sql)) {
                     echo "<li><img src='img/" . $produto->imagem . "' alt='Foto de exibição' /></br>";
                     echo "<h1 style='background-color:gray ; color:white'>" . $produto->nome . "</h1>";
-                    echo "<strong>" . $produto->descricao . "</strong></br><br>";
-                    echo "<h4 style='color:red; font-size:20px' > De R$ ".$produto->preco. " por R$" . $produto->desconto . " à vista</h4></li>";
+                    echo "<strong>" . $produto->descricao . "</strong></br>";
+                    echo "<h4 style='color:red; font-size:20px' >Promoção <br> de R$ ".$produto->preco. " por R$ " . $produto->desconto . " à vista</h4></li>";
                 }
                 ?>
                 <video id="clickVideo">

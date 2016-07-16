@@ -18,8 +18,8 @@ if($promocao == "sim"){
 
 // Se a foto estiver sido selecionada
 if (!empty($imagem["name"])) {
-    $largura = 490; // Largura máxima em pixels
-    $altura = 490; // Altura máxima em pixels
+    $largura = 400; // Largura máxima em pixels
+    $altura = 400; // Altura máxima em pixels
     $tamanho = 600000; // Tamanho máximo do arquivo em bytes
     // Verifica se o arquivo é uma imagem
     if (!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $imagem["type"])) {
@@ -52,7 +52,7 @@ if (!empty($imagem["name"])) {
                 . "VALUES ('{$nome}','{$descricao}','{$nome_imagem}',{$preco},{$promocao},{$desconto},'{$tipo}')");
         // Se os dados forem inseridos com sucesso
         if ($sql) {
-            echo "<script>alert('Produto cadastrado com sucesso!');</script>"; //ao confirmar o dialogo volta pra Admin.php
+            echo "<script>alert('Produto cadastrado com sucesso!');</script>"; 
             header("refresh: 1; url=incluir.php");
         }
     }
