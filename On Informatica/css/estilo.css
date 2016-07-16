@@ -258,7 +258,7 @@ section#imagens li#tablet6{
 aside#publi1 img{
     position:relative;
     left:10px;
-    top:-50px;
+    
     width:550px;
     height:250px;
     border: 4px solid black;
@@ -270,7 +270,7 @@ aside#publi2 img{
     display:block;
     position:relative;
     left:620px;
-    top:-342px;	
+    top:-290px;	
     width:550px;
     height:250px;
     border: 4px solid black;
